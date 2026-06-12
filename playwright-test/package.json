@@ -1,13 +1,33 @@
 {
-  "name": "playwright",
+  "name": "makelinatest-playwright-tests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "description": "Autotests for QA internship portfolio using Playwright",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:report": "playwright show-report",
+    "install:browsers": "playwright install",
+    "install:browsers:with-deps": "playwright install --with-deps",
+    "codegen": "playwright codegen"
+  },
+  "keywords": [
+    "qa",
+    "testing",
+    "playwright",
+    "e2e"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.3.3"
